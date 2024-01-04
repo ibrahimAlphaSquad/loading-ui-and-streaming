@@ -42,8 +42,9 @@ export default class ErrorBoundary extends React.Component {
     super(props);
     this.state = { error: null, errorInfo: null };
   }
-  
+
   componentDidCatch(error, errorInfo) {
+    console.log({ error, errorInfo });
     // Catch errors in any components below and re-render with error message
     this.setState({
       error: error,
@@ -51,7 +52,7 @@ export default class ErrorBoundary extends React.Component {
     })
     // You can also log error messages to an error reporting service here
   }
-  
+
   render() {
     if (this.state.errorInfo) {
       // Error path
@@ -61,12 +62,12 @@ export default class ErrorBoundary extends React.Component {
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
-            {this.state.errorInfo.componentStack}
+            {/* {this.state.errorInfo.componentStack} */}
           </details>
         </div>
       );
     }
     // Normally, just render children
     return this.props.children;
-  }  
+  }
 }
