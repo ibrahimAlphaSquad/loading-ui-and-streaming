@@ -13,18 +13,18 @@ export default function Page() {
         <div className="flex flex-col justify-center items-center space-y-3 px-4 mb-5">
             <h1 className="text-black text-4xl font-black p-10">Hello, Dashboard Page!</h1>
             <ErrorBoundary fallback={<p>Something went wrong</p>}>
-                <Suspense fallback={<Loading title="Loading Threatened Species..." />}>
-                    <ThreatenedSpecies />
+                <Suspense fallback={<Loading title="Loading Dogs..." />}>
+                    <Dogs />
                 </Suspense>
             </ErrorBoundary>
+            <Suspense fallback={<Loading title="Loading Threatened Species..." />}>
+                <ThreatenedSpecies />
+            </Suspense>
             <Suspense fallback={<Loading title="Loading Fruits..." />}>
                 <Fruits />
             </Suspense>
             <Suspense fallback={<Loading title="Loading Post Feed..." />}>
                 <PostFeed />
-            </Suspense>
-            <Suspense fallback={<Loading title="Loading Dogs..." />}>
-                <Dogs />
             </Suspense>
         </div>
     )
