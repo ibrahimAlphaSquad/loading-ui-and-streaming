@@ -63,7 +63,8 @@ export default class ErrorBoundary extends React.Component {
       return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4">
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">Something went wrong.</div>
+            {/* <div className="font-bold text-xl mb-2">Something went wrong.</div> */}
+            {this.props.fallback}
             <details>
               <summary className="text-gray-800 font-bold pt-4">Error Details</summary>
               {this.state.error && <p className="text-gray-700"><strong className='capitalize'>Message: </strong>{this.state.error.message}</p>}
