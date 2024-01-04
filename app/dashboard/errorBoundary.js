@@ -27,15 +27,16 @@ export default class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.hasError) {
-      return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4">
-          <div className="px-6 py-4">
-            <p className="font-bold text-xl mb-2">Something went wrong.</p>
-          </div>
-        </div>
-      );
-      // // You can render any custom fallback UI
-      // return this.props.fallback;
+      // return (
+      //   <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4">
+      //     <div className="px-6 py-4">
+      //       <p className="font-bold text-xl mb-2">Something went wrong.</p>
+      //     </div>
+      //   </div>
+      // );
+
+      // You can render any custom fallback UI
+      return this.props.fallback;
     }
 
     return this.props.children;

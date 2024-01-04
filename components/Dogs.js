@@ -1,7 +1,7 @@
 import React from 'react'
 
 async function getData() {
-    const res = await fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=20', { cache: 'no-store' })
+    // const res = await fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=20', { cache: 'no-store' })
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
