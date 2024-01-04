@@ -1,9 +1,10 @@
 import React from 'react'
 
 async function getData() {
-    const res = await fetch('https://apiv3.iucnredlist.org/api/v3/species/page/0?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee', { cache: 'no-store' })
+    const res = await fetch('https://apiv3.org/api/v3/species/page/0?token=9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee', { cache: 'no-store' })
     if (!res.ok) {
-        throw new Error('Failed to fetch data')
+        console.log({ res })
+        // throw new Error('Failed to fetch data')
     }
     return res.json()
 }
