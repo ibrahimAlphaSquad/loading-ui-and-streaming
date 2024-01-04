@@ -8,7 +8,7 @@ import ErrorBoundary from "./errorBoundary";
 
 export default function Page() {
     return (
-        <div className="flex flex-col justify-center items-center space-y-3 px-4 mb-5">
+        <div className="flex flex-col justify-center items-center gap-6 px-4 mb-5">
             <h1 className="text-black text-4xl font-black p-10">Hello, Dashboard Page!</h1>
             <ErrorBoundary fallback={
                 <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4">
