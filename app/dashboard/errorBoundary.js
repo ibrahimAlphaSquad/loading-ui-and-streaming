@@ -1,3 +1,5 @@
+// Approach 1
+
 // "use client"
 
 // import React from 'react'
@@ -33,6 +35,8 @@
 //   }
 // }
 
+// Approach 2
+
 "use client"
 
 import React from 'react'
@@ -57,13 +61,20 @@ export default class ErrorBoundary extends React.Component {
     if (this.state.errorInfo) {
       // Error path
       return (
-        <div>
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {/* {this.state.errorInfo.componentStack} */}
-          </details>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4">
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">Something went wrong.</div>
+            <details>
+              <summary className="text-gray-800 font-bold pt-4">Error Details</summary>
+              {this.state.error && <p className="text-gray-700"><strong className='capitalize'>Message: </strong>{this.state.error.message}</p>}
+              {this.state.error && <p className="text-gray-700"><strong className='capitalize'>Digest: </strong>{this.state.error.digest}</p>}
+            </details>
+            {/* <details style={{ whiteSpace: 'pre-wrap' }}>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {this.state.errorInfo.componentStack}
+            </details> */}
+          </div>
         </div>
       );
     }
