@@ -13,13 +13,13 @@ export default async function Dogs() {
     return (
         <>
             <h2 className="text-black text-4xl font-bold">Dogs</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-4'>
                 {dogsData.slice(0, 10).map((_dog, idx) => {
                     return (
                         <div key={idx} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">{_dog.title}</div>
-                                <p className="text-gray-700 text-base">
+                                <p className="text-gray-700 text-base text-clip">
                                     {_dog.text}
                                 </p>
                             </div>

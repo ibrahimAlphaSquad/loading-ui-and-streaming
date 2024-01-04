@@ -13,8 +13,8 @@ export default async function Fruits() {
     return (
         <>
             <h2 className="text-black text-4xl font-bold">Fruits</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'>
-                {fruitsData.slice(0, 10).map((_fruit, idx) => {
+            <div className='grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 gap-4'>
+                {fruitsData.slice(0, 14).map((_fruit, idx) => {
                     return (
                         <div key={idx} className="max-w-sm rounded overflow-hidden shadow-lg bg-white text-center p-4">
                             <div className="px-6 py-4">

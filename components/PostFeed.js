@@ -14,7 +14,7 @@ export default async function PostFeed() {
   return (
     <>
       <h2 className="text-black text-4xl font-bold">Post Feed</h2>
-      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-4'>
         {postData.slice(0, 10).map((_post, idx) => {
           return (
             <div key={idx} className={`${_post.completed ? 'bg-green-500' : 'bg-red-500'} max-w-sm rounded overflow-hidden shadow-lg p-4`}>
@@ -22,7 +22,7 @@ export default async function PostFeed() {
               <p><strong>User ID:</strong> {_post.userId}</p>
               <p><strong>ID:</strong> {_post.id}</p>
               <p className="text-black">
-              <strong>Status:</strong> {_post.completed ? 'Completed' : 'Not Completed'}
+                <strong>Status:</strong> {_post.completed ? 'Completed' : 'Not Completed'}
               </p>
             </div>
           )
