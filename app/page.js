@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import ClientComponent from '@/components/ClientComponent'
 
 export default function Home() {
   return (
@@ -21,6 +21,7 @@ export default function Home() {
           </p>
         </a>
       </div>
+      <ClientComponent />
     </main>
   )
 }
