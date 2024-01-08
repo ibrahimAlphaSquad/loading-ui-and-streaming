@@ -7,12 +7,12 @@
     "unused-imports"
   ],
   "rules": {
-    "no-duplicate-case": "error", // this will turn off a rule
-    "no-unused-vars": "error", // this will notify violation but not output error
-    "no-func-assign": "error", // this will notify violation and outputs error
-    "unused-imports/no-unused-imports": "error",
-    "react/jsx-key": "warn",
-    "react/button-has-type": "warn",
-    "no-console": "warn"
+    "no-duplicate-case": "error", // Disallows duplicate case labels in switch statements
+    "no-unused-vars": "error", // Reports variables that are declared but not used anywhere in the code
+    "no-func-assign": "error", // Prevents reassigning function declarations
+    "unused-imports/no-unused-imports": "error", // Detects and reports any imports that are declared but not used
+    "react/jsx-key": "warn", // Ensures that elements in a list have a unique 'key' prop
+    "react/button-has-type": "warn", // Ensures that every button element has an explicit 'type' attribute
+    "no-console": "warn" // Warns about console statements in the code, useful for cleaning up before production
   }
 }
