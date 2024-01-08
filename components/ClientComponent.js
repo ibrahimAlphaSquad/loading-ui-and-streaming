@@ -20,8 +20,8 @@ export default function ClientComponent() {
                 <h1 className='text-xl font-bold'>Basic Counter (Client-Side Component)</h1>
                 <p className='text-black font-bold text-xl text-center mb-4'>{counter}</p>
                 <div className='flex justify-center items-center gap-3'>
-                    <button className='p-4 w-24 text-center text-white font-extrabold text-2xl bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => ++prev) }}>+</button>
-                    <button className='p-4 w-24 text-center text-white font-extrabold text-2xl bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => --prev) }}>-</button>
+                    <button type='button' className='p-4 w-24 text-center text-white font-extrabold text-2xl bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => ++prev) }}>+</button>
+                    <button type='button' className='p-4 w-24 text-center text-white font-extrabold text-2xl bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => --prev) }}>-</button>
                 </div>
             </div>
             <div className='w-full'>

@@ -11,6 +11,7 @@
     "no-unused-vars": "error", // this will notify violation but not output error
     "no-func-assign": "error", // this will notify violation and outputs error
     "unused-imports/no-unused-imports": "error",
-    "react/jsx-key": "warn"
+    "react/jsx-key": "warn",
+    "react/button-has-type": "warn"
   }
 }
