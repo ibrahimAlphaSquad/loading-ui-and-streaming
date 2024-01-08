@@ -15,7 +15,7 @@ export default function ClientComponent() {
     return (
         <div className='rounded-lg px-5 py-4 border border-gray-300 w-[27rem] flex flex-col gap-5'>
             {/* <img src='./next.svg' /> */}
-            <Image src='./next.svg' alt='next.js logo'/>
+            <Image src='./next.svg' alt='next.js logo' />
             <div className='w-full'>
                 <h1 className='text-xl font-bold'>Basic Counter (Client-Side Component)</h1>
                 <p className='text-black font-bold text-xl text-center mb-4'>{counter}</p>
@@ -26,7 +26,7 @@ export default function ClientComponent() {
             </div>
             <div className='w-full'>
                 <h1 className='text-xl font-bold'>Key prop testing</h1>
-                {localArray.map((_item,idx) => {
+                {localArray.map((_item, idx) => {
                     return (
                         <p key={idx}>{_item.title}</p>
                     )

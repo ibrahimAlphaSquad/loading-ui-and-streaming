@@ -12,6 +12,7 @@
     "no-func-assign": "error", // this will notify violation and outputs error
     "unused-imports/no-unused-imports": "error",
     "react/jsx-key": "warn",
-    "react/button-has-type": "warn"
+    "react/button-has-type": "warn",
+    "no-console": "warn"
   }
 }
