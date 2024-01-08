@@ -1,6 +1,16 @@
 {
-  "extends": ["next", "next/core-web-vitals"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended"
+  ],
+  "plugins": [
+    "unused-imports"
+  ],
   "rules": {
-    "no-unused-vars": "warn"
+    "no-duplicate-case": "error", // this will turn off a rule
+    "no-unused-vars": "error", // this will notify violation but not output error
+    "no-func-assign": "error", // this will notify violation and outputs error
+    "unused-imports/no-unused-imports": "error",
+    "react/jsx-key": "warn"
   }
 }

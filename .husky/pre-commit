@@ -2,3 +2,8 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run lint
+
+if [ $? -ne 0 ]; then
+  echo "Lint warnings or errors found. Commit aborted."
+  exit 1
+fi

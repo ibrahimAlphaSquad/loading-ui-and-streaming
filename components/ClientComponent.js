@@ -1,22 +1,36 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
+import React, { useState } from 'react'
 
 export default function ClientComponent() {
-    const [unUsedStated, setUnUsedStated] = useState(null);
-    const [someState, setSomeState] = useState(null);
-    const [counter, setCounter] = useState(second)
+    const [counter, setCounter] = useState(0);
 
-    useEffect(() => {
-        console.log("useEffect")
-    }, [])
+    const localArray = [
+        { title: "FE" },
+        { title: "BE" },
+        { title: "dev-ops" }
+    ]
 
     return (
-        <div className=''>
-            <p className='text-black font-bold text-xl'>{counter}</p>
-            <div className='flex justify-center items-center'>
-                <button className='p-4 text-center text-black text-lg bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => { ++prev }) }}>+</button>
-                <button className='p-4 text-center text-black text-lg bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => { --prev }) }}>-</button>
+        <div className='rounded-lg px-5 py-4 border border-gray-300 w-[27rem] flex flex-col gap-5'>
+            {/* <img src='./next.svg' /> */}
+            <Image src='./next.svg' alt='next.js logo'/>
+            <div className='w-full'>
+                <h1 className='text-xl font-bold'>Basic Counter (Client-Side Component)</h1>
+                <p className='text-black font-bold text-xl text-center mb-4'>{counter}</p>
+                <div className='flex justify-center items-center gap-3'>
+                    <button className='p-4 w-24 text-center text-white font-extrabold text-2xl bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => ++prev) }}>+</button>
+                    <button className='p-4 w-24 text-center text-white font-extrabold text-2xl bg-blue-600 rounded-md' onClick={() => { setCounter((prev) => --prev) }}>-</button>
+                </div>
+            </div>
+            <div className='w-full'>
+                <h1 className='text-xl font-bold'>Key prop testing</h1>
+                {localArray.map((_item,idx) => {
+                    return (
+                        <p key={idx}>{_item.title}</p>
+                    )
+                })}
             </div>
         </div>
     )
