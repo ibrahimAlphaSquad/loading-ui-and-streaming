@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function ClientComponent() {
     const [unUsedStated, setUnUsedStated] = useState(null);
